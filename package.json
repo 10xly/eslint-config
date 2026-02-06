@@ -1,6 +1,6 @@
 {
   "name": "@10xly/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "10x eslint config",
   "keywords": [
     "10xly",
@@ -27,14 +27,12 @@
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
     "eslint-formatter-pretty": "^7.0.0",
+    "eslint-plugin-10x-engineering": "^1.0.0",
     "eslint-plugin-ninja": "^0.0.8",
     "eslint-plugin-perfectionist": "^5.3.0",
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-unicorn": "^62.0.0",
     "lodash": "^4.17.23",
     "prettier-linter-helpers": "^1.0.1"
-  },
-  "devDependencies": {
-    "eslint-plugin-10x-engineering": "^1.0.0"
   }
 }
