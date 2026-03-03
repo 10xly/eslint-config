@@ -52,6 +52,7 @@ export default [
       "perfectionist/sort-imports": "off",
       "perfectionist/sort-modules": "off",
       "unicorn/filename-case": "off",
+      "unicorn/no-abusive-eslint-disable": "off"
     },
   },
   {
