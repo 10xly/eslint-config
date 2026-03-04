@@ -52,7 +52,8 @@ export default [
       "perfectionist/sort-imports": "off",
       "perfectionist/sort-modules": "off",
       "unicorn/filename-case": "off",
-      "unicorn/no-abusive-eslint-disable": "off"
+      "unicorn/no-abusive-eslint-disable": "off",
+      "sonarjs/no-empty-test-file": "off"
     },
   },
   {
