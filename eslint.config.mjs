@@ -26,7 +26,7 @@ export default [
       sonarjs: sonar,
       lodash,
       "10x-engineering": plugin10x,
-      node: node,
+      n: node,
       ydn
     },
     languageOptions: {
