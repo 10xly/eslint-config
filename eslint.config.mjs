@@ -27,7 +27,7 @@ export default [
       lodash,
       "10x-engineering": plugin10x,
       n: node,
-      ydn
+      "you-dont-need-lodash-underscore": ydn
     },
     languageOptions: {
       globals: {
