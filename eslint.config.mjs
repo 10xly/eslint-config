@@ -70,7 +70,8 @@ export default [
       "perfectionist/sort-modules": "off",
       "unicorn/filename-case": "off",
       "unicorn/no-abusive-eslint-disable": "off",
-      "sonarjs/no-empty-test-file": "off"
+      "sonarjs/no-empty-test-file": "off",
+      "sonarjs/file-header": "off"
     },
   },
   {
