@@ -6,6 +6,9 @@ import unicorn from "eslint-plugin-unicorn"
 import perfectionist from "eslint-plugin-perfectionist"
 import sonar from "eslint-plugin-sonarjs"
 import plugin10x from "eslint-plugin-10x-engineering"
+import lodash from "eslint-plugin-lodash"
+import node from "eslint-plugin-n"
+import ydn from "eslint-plugin-you-dont-need-lodash-underscore"
 
 const ninja = fixupPluginRules(ninjaPlugin)
 
@@ -21,7 +24,10 @@ export default [
       ninja,
       unicorn,
       sonarjs: sonar,
-      "10x-engineering": plugin10x
+      lodash,
+      "10x-engineering": plugin10x,
+      node: node,
+      ydn
     },
     languageOptions: {
       globals: {
@@ -32,12 +38,23 @@ export default [
     rules: {
       ...js.configs.all.rules,
       ...unicorn.configs.all.rules,
-      ...sonar.configs.recommended.rules,
+      ...node.configs["flat/all"].rules,
+      ...Object.fromEntries(
+        Object.entries(sonar.rules).map(([key, _value]) => {
+          return ["sonarjs/".concat(key), "error"]
+        }),
+      ),
+       ...Object.fromEntries(
+        Object.entries(lodash.rules).map(([key, _value]) => {
+          return ["lodash/".concat(key), "error"]
+        }),
+      ),
       ...Object.fromEntries(
         Object.entries(plugin10x.rules).map(([key, _value]) => {
           return ["10x-engineering/".concat(key), "error"]
         }),
       ),
+      ...ydn.configs.all.rules,
       strict: "off",
       "func-style": "off",
       "ninja/prefer-npm": 2,
