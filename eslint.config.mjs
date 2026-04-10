@@ -71,7 +71,9 @@ export default [
       "unicorn/filename-case": "off",
       "unicorn/no-abusive-eslint-disable": "off",
       "sonarjs/no-empty-test-file": "off",
-      "sonarjs/file-header": "off"
+      "sonarjs/file-header": "off",
+      "sonarjs/no-implicit-require": "off",
+      "n/no-missing-require": "off"
     },
   },
   {
